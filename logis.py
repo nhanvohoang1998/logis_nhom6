@@ -89,17 +89,17 @@ elif choice == 'Sử dụng mô hình để dự báo':
             flag = True       
     if type=="Input":        
         git = st.number_input('Insert y')
-        DT = st.number_input('Insert DT')
-        TN = st.number_input('Insert TN')
-        SPT = st.number_input('Insert SPT')
-        GTC = st.number_input('Insert GTC')
-        GD = st.number_input('Insert GD')
-        TCH = st.number_input('Insert TCH')
-        GT = st.number_input('Insert GT')
-        DV = st.number_input('Insert DV')
-        VPCT = st.number_input('Insert VPCT')
-        LS = st.number_input('Insert LS')
-        lines={'y':[git],'DT':[DT],'TN':[TN],'SPT':[SPT],'GTC':[GTC],'GD':[GD],'TCH':[TCH],'GT':[GT],'DV':[DV],'VPCT':[VPCT],'LS':[LS]}
+        DT = st.number_input('diện tích thế chấp')
+        TN = st.number_input('thu nhập')
+        SPT = st.number_input('số người phụ thuộc')
+        GTC = st.number_input('giá trị thế chấp')
+        TCH = st.number_input('tuổi chủ hộ')
+        GT = st.number_input('giới tính')
+        DV = st.number_input('địa vị')   
+        LS = st.number_input('lãi suất cho vay')
+        PL = st.number_input('pháp lý khách hàng')
+        NCV = st.number_input('nhu cầu vay')
+        lines={'y':[git],'DT':[DT],'TN':[TN],'SPT':[SPT],'GTC':[GTC],'TCH':[TCH],'GT':[GT],'DV':[DV],'LS':[LS],'PL':[PL],'NCV':[NCV]}
         lines=pd.DataFrame(lines)
         st.dataframe(lines)
         flag = True
