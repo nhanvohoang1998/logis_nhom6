@@ -12,10 +12,10 @@ from sklearn import metrics
 
 df = pd.read_csv("credit access.csv", encoding='latin-1')
 
-st.title("Hồi quy tuyến tính")
-st.write("## Dự báo khả năng tiếp cận vốn tín dụng của nông hộ")
+st.title("Logis_nhóm6")
+st.write("## xác định khả năng tiếp cận vốn tín dụng ")
 
-uploaded_file = st.file_uploader("Choose a file", type=['csv'])
+uploaded_file = st.file_uploader("chọn file trong csv để nhập dữ liệu", type=['csv'])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, encoding='latin-1')
     df.to_csv("data.csv", index = False)
@@ -36,7 +36,7 @@ score_train=model.score(X_train, y_train)
 score_test=model.score(X_test, y_test)
 
 
-confusion_matrix = pd.crosstab(y_test, yhat_test, rownames=['Actual'], colnames=['Predicted'])
+confusion_matrix = pd.crosstab(y_test, yhat_test, rownames=['giá trị thực tế'], colnames=['giá trị dự báo'])
 
 
 
@@ -50,7 +50,7 @@ if choice == 'Mục tiêu của mô hình':
     ###### Mô hình được xây dựng để dự báo khả năng tiếp cận vốn tín dụng của nông hộ dựa trên các biến đặc điểm chủ hộ, điều kiện của nông hộ.
     """)  
     st.write("""###### Mô hình sử dụng thuật toán LogisticRegression""")
-    st.image("ham_spam.jpg")
+    st.image("chiNhanhBD.jpg")
     st.image("LogReg_1.png")
     st.image("motabien.png")
 
