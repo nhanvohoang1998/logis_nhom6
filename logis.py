@@ -96,7 +96,7 @@ elif choice == 'Sử dụng mô hình để dự báo':
         TCH = st.number_input('tuổi chủ hộ')
         GT = st.number_input('giới tính')
         DV = st.number_input('địa vị')   
-        LS = st.number_input('lãi suất cho vay')
+        LS = st.number_input('lịch sử vay')
         PL = st.number_input('pháp lý khách hàng')
         NCV = st.number_input('nhu cầu vay')
         lines={'y':[git],'DT':[DT],'TN':[TN],'SPT':[SPT],'GTC':[GTC],'TCH':[TCH],'GT':[GT],'DV':[DV],'LS':[LS],'PL':[PL],'NCV':[NCV]}
